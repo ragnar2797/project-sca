@@ -32,7 +32,7 @@ jobs:
         continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-  zap_scan:
+zap_scan:
     name: ZAP Website Scan
  
 on:
