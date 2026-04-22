@@ -17,7 +17,7 @@ jobs:
     - name: ZAP Baseline Scan
       run: |
         docker run -t owasp/zap2docker-stable zap-baseline.py \
-          -t http://juice-shop.herokuapp.com/ \
+          -t https://juice-shop.herokuapp.com/ \
           -r zap-report.html \
           --exit-code-on-fail 0
       continue-on-error: true  # workflow continues even if alerts are found
