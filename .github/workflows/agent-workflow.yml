@@ -42,7 +42,7 @@ jobs:
         # Download SonarCloud results
         sleep 30
         curl -u "$SONAR_TOKEN:" \
-          "https://sonarcloud.io/api/issues/search?componentKeys=testtraininggs_testtraininggs&resolved=false" \
+          "https://sonarcloud.io/api/issues/search?componentKeys=ragnar2797_ragnar2797&resolved=false" \
           -o sonar-results.json || echo '{"issues":[]}' > sonar-results.json
         
         echo "report-path=sonar-results.json" >> $GITHUB_OUTPUT
@@ -268,7 +268,7 @@ jobs:
                               "tool": "SonarQube",
                               "severity": issue.get('severity', 'UNKNOWN'),
                               "vulnerability": issue.get('rule', 'Unknown Rule'),
-                              "file": issue.get('component', '').replace('testtraining_testtraining:', ''),
+                              "file": issue.get('component', '').replace('ragnar2797_ragnar2797:', ''),
                               "line": issue.get('line', 0),
                               "description": issue.get('message', '')[:200]
                           })
